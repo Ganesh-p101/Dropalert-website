@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f5132; /* green background */
+  color: white;
+}
+
+#contentBox {
+  background-color: #14532d;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+header {
+  background-color: lightslategray;
+ font-size: 50px; 
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #198754; /* bootstrap green */
+  color: white;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+}
+
+aside#sidebar {
+  width: 250px;
+  background-color: #0f5110;
+  padding: 20px;
+  color:white;
+  min-height: 90vh;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: lightgreen;
+  color:black;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+    .product-row {
+      display: flex;
+      flex-wrap: wrap; /* Wrap on small screens */
+      justify-content: center;
+      gap: 20px;
+    }
+    .product-card {
+      width: 200px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      transition: transform 0.2s;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+      border-color: #ff9900;
+    }
+    .product-image {
+      width: 100%;
+      border-radius: 8px;
+    }
+.moving-background {
+  background: linear-gradient(90deg, red, orange, yellow, red);
+  background-size: 400% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: moveGradient 3s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+  
+  
+}
+
+.photo-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 40px auto;
+}
+
+.color-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    red, orange, yellow, green, blue, indigo, violet, red
+  );
+  animation: spin 10s linear infinite;
+  z-index: 1;
+}
+
+.profile-photo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
